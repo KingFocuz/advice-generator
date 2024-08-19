@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --lightCyan: hsl(193, 38%, 86%);
+    --neonGreen: hsl(150, 100%, 66%);
+    --greyishBlue: hsl(217, 19%, 38%);
+    --darkGreyishBlue: hsl(217, 19%, 24%);
+    --darkBlue: hsl(218, 23%, 16%);
+}
+
+*, 
+::before,
+::after {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--darkBlue);
+    font-family: "Manrope", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+}
+
+main {
+    background-color: var(--darkGreyishBlue);
+    width: 300px;
+    height: 280px;
+    margin: auto;
+    padding: 30px 20px 20px 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#advice-id {
+    display: block;
+    color: var(--neonGreen);
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+}
+
+#advice {
+    color: var(--lightCyan);
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+#divider-mobile {
+    position: absolute;
+    top: 13rem;
+}
+
+#divider-desktop {
+    display: none;
+}
+
+#dice {
+    background-color: var(--neonGreen);
+    padding: 8px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 15.5rem;
+    left: 7.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#dice:hover {
+    box-shadow: 0 0 40px 0 var(--neonGreen);
+}
+
+footer p {
+    color: var(--lightCyan);
+    font-weight: 400;
+    font-size: 0.8rem;
+    word-spacing: 2px;
+}
+
+footer p a {
+    text-decoration: none;
+    color: var(--neonGreen);
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        width: 400px;
+    }
+
+    #divider-mobile {
+        display: none;
+    }
+
+    #divider-desktop {
+        display: block;
+        position: absolute;
+        top: 13rem;
+    }
+    #dice {
+        left: 10.4rem;
+    }
+}
